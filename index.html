@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Websanova jQuery Humanized Message Plugin</title>
+
+	<script type="text/javascript" src="./inc/jquery.1.7.1.min.js"></script>
+	
+	<link rel="Stylesheet" type="text/css" href="./wHumanMsg.css" />
+	<script type="text/javascript" src="./wHumanMsg.js"></script>
+	
+</head>
+<body>
+
+<div>This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text </div>
+
+<div id="test"></div>
+
+
+<script type="text/javascript">
+	
+	var hm = $("body").wHumanMsg();
+	
+	$.fn.wHumanMsg.defaultSettings.color = 'orange';
+	
+	var hm2 = $("#test").wHumanMsg({fixed: false, offsetTop: 20});
+	
+</script>
+
+<input type="button" value="reset" onclick="hm.wHumanMsg('reset');"><br/>
+<input type="button" value="default" onclick="hm.wHumanMsg('Websanova Humanized<br/>Message Plugin');"><br/>
+
+<input type="button" value="update color" onclick="hm.wHumanMsg('color', 'plum'); hm.wHumanMsg('updated color to: ' + hm.wHumanMsg('color'));"><br/>
+<input type="button" value="update opacity" onclick="hm.wHumanMsg('opacity', 1); hm.wHumanMsg('updated opacity to: ' + hm.wHumanMsg('opacity'));"><br/>
+<input type="button" value="update fadeIn" onclick="hm.wHumanMsg('fadeIn', 500); hm.wHumanMsg('updated fadeIn to: ' + hm.wHumanMsg('fadeIn'));"><br/>
+<input type="button" value="update fadeOut" onclick="hm.wHumanMsg('fadeOut', 500); hm.wHumanMsg('updated fadeOut to: ' + hm.wHumanMsg('fadeOut'));"><br/>
+<input type="button" value="update displayLength" onclick="hm.wHumanMsg('displayLength', 500); hm.wHumanMsg('updated displayLength to: ' + hm.wHumanMsg('displayLength'));"><br/>
+<input type="button" value="update html" onclick="hm.wHumanMsg('html', false); hm.wHumanMsg('updated html to: ' + hm.wHumanMsg('html'));"><br/>
+Try default again<br/>
+<input type="button" value="red" onclick="hm.wHumanMsg('This is red<br/>with html', {color: 'red'});"><br/>
+<input type="button" value="green" onclick="hm.wHumanMsg('This is green<br/>with no html', {color: 'green', html: false});"><br/>
+<input type="button" value="blue" onclick="hm.wHumanMsg('This is blue<br/>back to html', {color: 'blue'});"><br/>
+<input type="button" value="white" onclick="hm.wHumanMsg('This is white with fast fades', {color: 'white', fadeIn: 300, fadeOut: 300});"><br/>
+<input type="button" value="black" onclick="hm.wHumanMsg('This is black with short display', {color: 'black', displayLength: 300});"><br/>
+<input type="button" value="cream" onclick="hm.wHumanMsg('This is cream with low opacity', {color: 'cream', opacity: 0.3});"><br/>
+<input type="button" value="yellow" onclick="hm.wHumanMsg('This is yellow', {color: 'yellow'});"><br/>
+<input type="button" value="orange" onclick="hm.wHumanMsg('This is orange', {color: 'orange'});"><br/>
+<input type="button" value="plum" onclick="hm.wHumanMsg('This is plum', {color: 'plum'});"><br/>
+
+<br/>
+<input type="button" value="test2 - defaultSettings" onclick="hm2.wHumanMsg('This is test2 with defaultSettings altered');">
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div>This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text This is some background text </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -69,7 +69,8 @@
 		displayLength	: 5000,
 		html			: true,
 		fixed			: true,
-		offsetTop		: 0
+		offsetTop		: 0,
+		showCloseButton	: true
 	};
 
 	function HumanMsg(settings)
@@ -94,8 +95,13 @@
 			if($this.hm) return $this.hm;
 
 			$this.bgObj = $('<div class="_wHumanMsg_bg"></div>').css('opacity', $this.settings.opacity);
-			$this.msgObj = $('<div class="_wHumanMsg_msg">Message</div>');
-			$this.colorObj = $('<div class="_wHumanMsg_outer _wHumanMsg_color_black">');
+			$this.msgObj = $('<div class="_wHumanMsg_msg">Message</div>')
+			
+			$this.colorObj = $('<div class="_wHumanMsg_outer _wHumanMsg_color_black">').click(function(){ $this.hm.fadeOut($this.settings.fadeOut); });
+			
+			var messageHolder = $('<div class="_wHumanMsg_msgHolder"></div>').append($this.msgObj);
+			
+			if($this.settings.showCloseButton) messageHolder.append('<div class="_wHumanMsg_close">X</div>');
 
 			$this.hm = 
 			$('<div class="_wHumanMsg_holder">')
@@ -103,7 +109,7 @@
 			.append(
 				$this.colorObj
 				.append( $this.bgObj )
-				.append( $this.msgObj )
+				.append( messageHolder )
 			);
 			
 			if($this.settings.fixed) $this.hm.css('position', 'fixed');

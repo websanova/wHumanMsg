@@ -66,15 +66,15 @@
 	}
 
 	$.fn.wHumanMsg.defaultSettings = {
-		theme			: 'black',
-		opacity			: 0.8,
-		fadeIn  		: 1000,
-		fadeOut 		: 1000,
-		displayLength	: 5000,
-		html			: true,
-		fixed			: true,
-		offsetTop		: 0,
-		showCloseButton	: true
+		theme			: 'black',		// set theme (color)
+		opacity			: 0.8,			// set background opacity
+		fadeIn  		: 1000,         // set fade in speed in milliseconds
+		fadeOut 		: 1000,			// set fade out speed in milliseconds
+		displayLength	: 5000,			// set length of time message will stay before fadeOut in milliseconds
+		html			: true,			// set html flag to true/false
+		fixed			: true,			// set fixed positioning to keep message at top of screen even when scrolling
+		offsetTop		: 0,			// set offset from top
+		showCloseButton	: true			// toggle message close button
 	};
 
 	function HumanMsg(settings, elem)

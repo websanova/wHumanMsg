@@ -8,7 +8,7 @@
  * @license         This websanova humanized message jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @github			http://github.com/websanova/wHumanMsg
- * @version         Version 1.1.1
+ * @version         Version 1.1.2
  *
  ******************************************/
 
@@ -57,7 +57,7 @@
 
 			var $settings = jQuery.extend(true, {}, settings);
 
-			var hm = new HumanMsg($settings);
+			var hm = new HumanMsg($settings, $elem);
 
 			$elem.append(hm.generate());
 
@@ -77,10 +77,11 @@
 		showCloseButton	: true
 	};
 
-	function HumanMsg(settings)
+	function HumanMsg(settings, elem)
 	{
 		this.hm = null;
 		this.settings = settings;
+		this.$elem = elem;
 
 		this.msgObj = null;
 		this.colorObj
@@ -118,7 +119,6 @@
 			
 			if($this.settings.fixed) $this.hm.css('position', 'fixed');
 			
-
 			return $this.hm;
 		},
 		

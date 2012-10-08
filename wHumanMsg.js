@@ -7,8 +7,8 @@
  * @copyright       Copyright (c) 2012 Websanova.
  * @license         This websanova humanized message jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
- * @docs            http://www.websanova.com/plugins/websanova/humanmsg
- * @version         Version 1.1.0
+ * @github			http://github.com/websanova/wHumanMsg
+ * @version         Version 1.1.1
  *
  ******************************************/
 
@@ -37,7 +37,7 @@
 						else if(settings !== undefined) { data.settings[option] = settings; }
 						else { values.push(data.settings[option]); }
 					}
-					else//NOTE: message cannot be one of the settings options, color, fadeIn, fadeOut, displayLength
+					else//NOTE: message cannot be one of the settings options, theme, fadeIn, fadeOut, displayLength
 					{
 						data.showMessage(option, settings);
 					}
@@ -66,7 +66,7 @@
 	}
 
 	$.fn.wHumanMsg.defaultSettings = {
-		color			: 'black',
+		theme			: 'black',
 		opacity			: 0.8,
 		fadeIn  		: 1000,
 		fadeOut 		: 1000,
@@ -132,7 +132,7 @@
 			var $this = this;
 			var settings = settings || {};
 			
-			var color = settings.color || $this.settings.color;
+			var color = settings.theme || $this.settings.theme;
 			var opacity = settings.opacity || $this.settings.opacity;
 			var fadeIn = settings.fadeIn || $this.settings.fadeIn;
 			var fadeOut = settings.fadeOut || $this.settings.fadeOut;

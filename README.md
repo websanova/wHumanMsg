@@ -61,8 +61,7 @@ Change color on the fly:
 
 ```javascript
 $("body").wHumanMsg();
-$('body').wHumanMsg('theme', 'red');
-$('body').wHumanMsg('Hello World!');
+$('body').wHumanMsg('Hello World!', {theme: 'red'});
 ```
 
 

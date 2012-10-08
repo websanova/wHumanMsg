@@ -8,41 +8,45 @@
  * @license         This websanova humanized message jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @docs            http://www.websanova.com/plugins/websanova/humanmsg
- * @version         Version 1.0.1
+ * @version         Version 1.1.0
  *
  ******************************************/
 
 (function($)
 {
 	$.fn.wHumanMsg = function(option, settings)
-	{	
+	{
 		if(typeof option === 'object')
 		{
 			settings = option;
 		}
 		else if(typeof option === 'string')
 		{
-			var data = this.data('_wHumanMsg');
+			var values = [];
 
-			if(data)
+			var elements = this.each(function()
 			{
-				if(option == 'reset') data.reset();
-				else if($.fn.wHumanMsg.defaultSettings[option] !== undefined)
+				var data = $(this).data('_wHumanMsg');
+
+				if(data)
 				{
-					if(settings !== undefined)
+					if(option == 'reset') { data.reset(); }
+					else if($.fn.wHumanMsg.defaultSettings[option] !== undefined)
 					{
-						if(option == 'offsetTop'){ data.hm.css('top', settings); return true; }
-						else{ data.settings[option] = settings; return true; }
+						if(option == 'offsetTop'){ data.hm.css('top', settings); }
+						else if(settings !== undefined) { data.settings[option] = settings; }
+						else { values.push(data.settings[option]); }
 					}
-					else return data.settings[option];
+					else//NOTE: message cannot be one of the settings options, color, fadeIn, fadeOut, displayLength
+					{
+						data.showMessage(option, settings);
+					}
 				}
-				else//NOTE: message cannot be one of the settings options, color, fadeIn, fadeOut, displayLength
-				{
-					data.showMessage(option, settings);
-					return true;
-				}
-			}
-			else return false;
+			});
+
+			if(values.length === 1) { return values[0]; }
+			if(values.length > 0) { return values; }
+			else { return elements; }
 		}
 
 		settings = $.extend({}, $.fn.wHumanMsg.defaultSettings, settings || {});

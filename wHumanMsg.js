@@ -8,7 +8,7 @@
  * @license         This websanova humanized message jQuery plug-in is dual licensed under the MIT and GPL licenses.
  * @link            http://www.websanova.com
  * @docs            http://www.websanova.com/plugins/websanova/humanmsg
- * @version         Version x.x
+ * @version         Version 1.0.1
  *
  ******************************************/
 

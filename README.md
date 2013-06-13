@@ -1,6 +1,15 @@
 # wHumanMsg.js
 
-A jQuery humanized message plugin. [Check out the live demo](http://www.websanova.com/plugins/humanmsg/jquery).
+A jQuery humanized message plugin is a way to neatly overlay alerts and message for users using your app.  You can position your messages on any part of the screen and they will neatly fade in and out with any color and time delay you like.
+
+* [View the wHumanMsg demo](http://whumanmsg.websanova.com)
+* [Download the lastest version of wHumanMsg](https://github.com/websanova/wHumanMsg/tags)
+
+
+## Related Plugins
+
+* [wTooltip](http://wtooltip.websanova.com) - Simple sleek looking tooltips.
+* [wModal](http://wmodal.websanova.com) - Clean looking and easy to use modals.
 
 
 ## Settings
@@ -21,52 +30,32 @@ $('#elem').wHumanMsg({
 });
 ```
 
-Update settings on the fly:
-
-```javascript
-$('#elem').wHumanMsg('opacity', 0.6);
-```
-
-Retrieve settings, if more than one it will return an array otherwise just the value.
-
-```javascript
-console.log($('#elem').wHumanMsg('opacity'));            // "0.8"
-console.log($('.elem').wHumanMsg('opacity'));            // ["0.8", "0.5"]
-```
-
-## Methods
-
-```html
-$('#elem').wHumanMsg('reset');
-```
-
-
 ## Examples
 
-Init and display message:
+Include and init the plugin:
 
-```javascript
+```js
+<script type="text/javascript" src="./wHumanMsg.js"></script>
+<link rel="Stylesheet" type="text/css" href="./wHumanMsg.css" />
 $("body").wHumanMsg();
+```
+
+### messages
+
+```html
 $("body").wHumanMsg('Hello World');
 ```
 
-Init some settings:
+### colors
 
-```javascript
-$("body").wHumanMsg({fixed: false, offsetTop: 20, showCloseButton: false, theme:'green');
-$('body').wHumanMsg('Hello World!');
-```
-
-Change color on the fly:
-
-```javascript
-$("body").wHumanMsg();
+```js
 $('body').wHumanMsg('Hello World!', {theme: 'red'});
 ```
 
 
 ## Resources
 
+* [More jQuery plugins by Websanova](http://websanova.com/plugins)
 * [jQuery Plugin Development Boilerplate](http://www.websanova.com/tutorials/jquery/jquery-plugin-development-boilerplate)
 * [The Ultimate Guide to Writing jQuery Plugins](http://www.websanova.com/tutorials/jquery/the-ultimate-guide-to-writing-jquery-plugins)
 

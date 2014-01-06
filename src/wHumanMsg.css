@@ -1,0 +1,53 @@
+/* layout (don't touch)
+ ---------------------------------------- */
+.wHumanMsg {
+  position: absolute;
+  z-index: 99999;
+  margin: auto;
+}
+.wHumanMsg-hideButton {
+  position: absolute;
+}
+
+/* generic
+ ---------------------------------------- */
+.wHumanMsg {
+  padding: 15px 50px;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: arial;
+  border-radius: 5px;
+}
+
+.wHumanMsg-hideButton {
+  cursor: pointer;
+  right: 7px;
+  top: 7px;
+  line-height: 7px;
+  height: 7px;
+  font-weight: bold;
+  font-size: 9px;
+}
+
+/* themes
+ ---------------------------------------- */
+.wHumanMsg-theme-black {
+  color: #eaeaea;
+  background-color: #000;
+}
+
+.wHumanMsg-theme-red {
+  color: #eaeaea;
+  background-color: #E41B17;
+}
+
+.wHumanMsg-theme-green {
+  color: #eaeaea;
+  background-color: #a1c935;
+}
+
+.wHumanMsg-theme-blue {
+  color: #eaeaea;
+  background-color: #43C6DB;
+}
+

@@ -28,37 +28,16 @@
     <h1 id="plugin-name">wHumanMsg.js</h1>
 
     <div class="content-box">
-      <div id="test"></div>
+      <input type="button" value="test default" onclick="$('body').wHumanMsg('opacity', 1).wHumanMsg('theme', 'black').wHumanMsg('msg', 'Successfully obliterated!');">
+      <input type="button" value="test red" onclick="$('body').wHumanMsg('theme', 'red').wHumanMsg('msg', 'Testing red');">
+      <input type="button" value="test green" onclick="$('body').wHumanMsg('theme', 'green').wHumanMsg('msg', 'Testing green');">
+      <input type="button" value="test blue" onclick="$('body').wHumanMsg('theme', 'blue').wHumanMsg('msg', 'Testing blue');">
 
-      <input type="button" value="reset" onclick="hm.wHumanMsg('reset');">
-      <input type="button" value="default" onclick="hm.wHumanMsg('Websanova Humanized<br/>Message Plugin');">
-    
-      <br/><br/>
+      <link rel="Stylesheet" type="text/css" href="./src/wHumanMsg.css" />
+      <script type="text/javascript" src="./src/wHumanMsg.js"></script>
 
-      <input type="button" value="update color" onclick="hm.wHumanMsg('theme', 'plum'); hm.wHumanMsg('updated color to: ' + hm.wHumanMsg('theme'));">
-      <input type="button" value="update opacity" onclick="hm.wHumanMsg('opacity', 1); hm.wHumanMsg('updated opacity to: ' + hm.wHumanMsg('opacity'));">
-      <input type="button" value="update fadeIn" onclick="hm.wHumanMsg('fadeIn', 500); hm.wHumanMsg('updated fadeIn to: ' + hm.wHumanMsg('fadeIn'));">
-      <input type="button" value="update fadeOut" onclick="hm.wHumanMsg('fadeOut', 500); hm.wHumanMsg('updated fadeOut to: ' + hm.wHumanMsg('fadeOut'));">
-      <input type="button" value="update displayLength" onclick="hm.wHumanMsg('displayLength', 500); hm.wHumanMsg('updated displayLength to: ' + hm.wHumanMsg('displayLength'));">
-      <input type="button" value="update html" onclick="hm.wHumanMsg('html', false); hm.wHumanMsg('updated html to: ' + hm.wHumanMsg('html'));">
-      
-      <br/><br/>
-
-      <input type="button" value="red" onclick="hm.wHumanMsg('This is red<br/>with html', {theme: 'red'});">
-      <input type="button" value="green" onclick="hm.wHumanMsg('This is green<br/>with no html', {theme: 'green', html: false});">
-      <input type="button" value="blue" onclick="hm.wHumanMsg('This is blue<br/>back to html', {theme: 'blue'});">
-      <input type="button" value="white" onclick="hm.wHumanMsg('This is white with fast fades', {theme: 'white', fadeIn: 300, fadeOut: 300});">
-      <input type="button" value="black" onclick="hm.wHumanMsg('This is black with short display', {theme: 'black', displayLength: 300});">
-      <input type="button" value="cream" onclick="hm.wHumanMsg('This is cream with low opacity', {theme: 'cream', opacity: 0.3});">
-      <input type="button" value="yellow" onclick="hm.wHumanMsg('This is yellow', {theme: 'yellow'});">
-      <input type="button" value="orange" onclick="hm.wHumanMsg('This is orange', {theme: 'orange'});">
-      <input type="button" value="plum" onclick="hm.wHumanMsg('This is plum', {theme: 'plum'});">
-
-      <link rel="Stylesheet" type="text/css" href="./wHumanMsg.css" />
-      <script type="text/javascript" src="./wHumanMsg.js"></script>
-      
-      <script type="text/javascript"> 
-        var hm = $("body").wHumanMsg();
+      <script type="text/javascript">
+        //$('body').wHumanMsg({opacity: 1});
       </script>
     </div>
   </div>

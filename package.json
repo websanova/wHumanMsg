@@ -1,0 +1,25 @@
+{
+  "name": "wHumanMsg",
+  "title": "wHumanMsg jQuery Plugin",
+  "version": "2.0.0",
+  "description": "A jQuery humanized message plugin is a way to neatly overlay alerts and message for users using your app.  You can position your messages on any part of the screen and they will neatly fade in and out with any color and time delay you like.",
+  "main": "wHumanMsg.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/websanova/wHumanMsg"
+  },
+  "author": {
+    "name": "Websanova",
+    "email": "rob@websanova.com",
+    "url": "http://websanova.com"
+  },
+  "homepage" : "http://whumanmsg.websanova.com",
+  "license": "MIT, GPL",
+  "dependencies": {
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-jshint": "",
+    "grunt-contrib-stylus": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-watch": ""
+  }
+}

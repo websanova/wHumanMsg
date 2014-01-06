@@ -1,4 +1,4 @@
-.wHumanMsg{position:absolute;z-index:99999;margin:auto}
+.wHumanMsg{position:fixed;z-index:99999;margin:auto}
 .wHumanMsg-hideButton{position:absolute}
 .wHumanMsg{padding:15px 50px;font-size:12px;line-height:12px;font-family:arial;-webkit-border-radius:5px;border-radius:5px}
 .wHumanMsg-hideButton{cursor:pointer;right:7px;top:7px;line-height:7px;height:7px;font-weight:bold;font-size:9px}

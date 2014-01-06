@@ -1,7 +1,7 @@
 /* layout (don't touch)
  ---------------------------------------- */
 .wHumanMsg {
-  position: absolute;
+  position: fixed;
   z-index: 99999;
   margin: auto;
 }
